@@ -1,0 +1,78 @@
+<form enctype="multipart/form-data" method="POST">
+  {% csrf_token %}
+  <!-- {{ formulario }} -->
+  {% for campo in formulario %}
+    <div class="mb-3 mt-3">
+      <label for="product" class="form-label">{{ campo.label }}</label>
+      <input 
+        type="{{ campo.field.widget.input_type }}"
+        class="form-check  border border-2 rounded"
+        name="{{ campo.name }}"
+        id="product"
+        aria-describedby="helpId"
+        placeholder="{{ campo.label }}">
+    </div>
+    <div class="col-12 help-text">{{ campo.errors }}</div>
+  {% endfor %}
+    <!-- <input name="" id="" class="btn btn-primary" type="submit" value="Agregar"> -->
+
+    {% for campo in stock %}
+      <div class="mb-3 mt-3">
+        <label for="product" class="form-label">{{ campo.label }}</label>
+        <input 
+          type="{{ campo.field.widget.input_type }}"
+          class="form-control border border-2 rounded"
+          name="{{ campo.name }}"
+          id="product"
+          aria-describedby="helpId"
+          placeholder="{{ campo.label }}">
+      </div>
+      <div class="col-12 help-text">{{ campo.errors }}</div>
+    {% endfor %}
+    <!-- <input name="" id="" class="btn btn-primary" type="submit" value="Agregar"> -->
+    
+    {% for campo in price %}
+      <div class="mb-3 mt-3">
+        <label for="product" class="form-label">{{ campo.label }}</label>
+        <input 
+          type="{{ campo.field.widget.input_type }}"
+          class="form-control border border-2 rounded"
+          name="{{ campo.name }}"
+          id="product"
+          aria-describedby="helpId"
+          placeholder="{{ campo.label }}">
+      </div>
+      <div class="col-12 help-text">{{ campo.errors }}</div>
+    {% endfor %}
+    <!-- <input name="" id="" class="btn btn-primary" type="submit" value="Agregar"> -->
+ 
+    {% for campo in provider %}
+      <div class="mb-3 mt-3">
+        <label for="product" class="form-label">{{ campo.label }}</label>
+        <input 
+          type="{{ campo.field.widget.input_type }}"
+          class="form-control border border-2 rounded"
+          name="{{ campo.name }}"
+          id="product"
+          aria-describedby="helpId"
+          placeholder="{{ campo.label }}">
+      </div>
+      <div class="col-12 help-text">{{ campo.errors }}</div>
+    {% endfor %}
+    <!-- <input name="" id="" class="btn btn-primary" type="submit" value="Agregar"> -->
+
+    {% for campo in provider_medicine %}
+      <div class="mb-3 mt-3">
+        <label for="product" class="form-label">{{ campo.label }}</label>
+        <input 
+          type="{{ campo.field.widget.input_type }}"
+          class="form-control border border-2 rounded"
+          name="{{ campo.name }}"
+          id="product"
+          aria-describedby="helpId"
+          placeholder="{{ campo.label }}">
+      </div>
+      <div class="col-12 help-text">{{ campo.errors }}</div>
+    {% endfor %}
+    <input name="" id="" class="btn btn-primary" type="submit" value="Agregar">
+</form>

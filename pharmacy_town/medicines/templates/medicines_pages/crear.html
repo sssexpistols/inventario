@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block titulo %} Agregar nuevo producto {% endblock %}
+
+{% block contenido %} 
+<div class="card">
+    <div class="card-header">
+        Agregar producto
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del producto</h4>
+        {% include 'medicines_pages/form.html' %}
+    </div>
+</div> 
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block titulo %} Pharmacy Town {% endblock %}
+
+{% block contenido %} 
+<div class="p-5 mt-3">
+    <div class="container">
+        <h1 class="display-3">Bienvenidos a Pharmacy Town</h1>
+        <p class="lead">Empezar a navegar en los medicamentos</p>
+        <hr class="my-2">
+        <p class="lead pb-3">
+            <a class="btn btn-primary btn-lg" href="{% url 'medicamentos' %}" role="button">Empezar</a>
+        </p>
+        <h5>¿Cuentas con alguna duda? <br><br> Puedes ir al sitio en Github para obtener todas las instrucciones necesarias</h5>
+    </div>
+</div>
+{% endblock %}
